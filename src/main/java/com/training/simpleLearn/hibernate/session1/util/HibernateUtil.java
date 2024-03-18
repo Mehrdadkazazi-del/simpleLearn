@@ -1,4 +1,4 @@
-package com.training.simpleLearn.hibernate.session1;
+package com.training.simpleLearn.hibernate.session1.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
