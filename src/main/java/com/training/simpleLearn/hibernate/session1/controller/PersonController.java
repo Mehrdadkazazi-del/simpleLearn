@@ -29,4 +29,9 @@ public class PersonController {
     public List<Person> findPersonByFirstName(@RequestParam(value = "name", required = true) String name, @RequestParam(value = "id", required = false) int id) {
         return personService.findPersonByFirstName(name);
     }
+
+    @GetMapping("findPersonByFirstName")
+    public List<Person> findPersonWithCarByFirstNameAndCarId(@RequestParam(value = "name", required = true) String name, @RequestParam(value = "carId", required = false) int carId) {
+        return personService.findPersonWithCarByFirstNameAndCarId(name, carId);
+    }
 }

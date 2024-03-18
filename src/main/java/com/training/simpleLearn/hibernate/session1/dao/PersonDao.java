@@ -11,8 +11,8 @@ import java.util.List;
 @Repository
 public interface PersonDao extends JpaRepository<Person, Long> {
 
-    @Query("from Person ent where ent.firstName like :firstName")
-    List<Person> findPersonByFirstName(@Param("firstName") String firstName);
+    //@Query("from Person ent where ent.firstName like :firstName")
+    //List<Person> findPersonByFirstName(@Param("firstName") String firstName);
 
     @Query("from Person person left join fetch Car car on person.personCarId=car.id where person.firstName like :firstName")
     List<Person> findPersonWithCarByFirstNameAndCarId(@Param("firstName") String firstName, int carId);

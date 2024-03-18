@@ -12,4 +12,6 @@ public interface PersonService {
     Optional<Person> loadById(int id);
 
     List<Person> findPersonByFirstName(String name);
+
+    List<Person> findPersonWithCarByFirstNameAndCarId(String name, int carId);
 }
